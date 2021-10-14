@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --icon-color: #F1ECC3;
+    --button-color: #145374;
+    --input-background-color: #85294A;
+    --background-button: rgba(255, 255, 255, 0);
+    --input-color-selector: #206A5D;
+    --register-button: #2A3D66;
+    --cancel-button: #931A25;
+    --title-size: 38px;
+    --title-font: 'Original Surfer', cursive;
+    --button-font: 'Righteous', cursive;
+    --label-font: 'Roboto', sans-serif;
+}
+
+.background {
+    background-image: linear-gradient(to left top, #6d3662, #77315b, #802c51, #872846, #8b263a, #892740, #872845, #85294a, #75325d, #5f3c69, #48436b, #364766);    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-none{
+    display: none;
+}
+
+.formulary {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 55px 20px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    border: solid 3px var(--icon-color);
+}

@@ -1,7 +1,6 @@
-// SHOW PASSWORD
-const user = document.getElementById('user')
-const password = document.getElementById('password')
-const eyeButton = document.querySelector(".far")
+const user = document.getElementById('user');
+const password = document.getElementById('password');
+const eyeButton = document.querySelector(".far");
 let isPass = true;
 
 const togglePass = () => {
