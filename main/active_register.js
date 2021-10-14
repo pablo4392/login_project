@@ -1,7 +1,5 @@
 const loginForm = document.getElementById('loginForm');
 const registerForm = document.getElementById('registerForm');
-// const registerButton = document.getElementById('registerButton');
-// const cancelButton = document.getElementById('cancelButton');
 
 const registerActivation= () => {
     registerForm.classList.add('formulary');

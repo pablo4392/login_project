@@ -55,13 +55,13 @@
             <button class="login-button">
                 Login
             </button>
-            <button class="register-button" onclick="registerActivation()" id="registerButton">
+            <button class="register-button" onclick="registerActivation()">
                 Sign Up
             </button>
         </form>
 
         <!------------------------------ REGISTER FORMULARY ---------------------------->
-        <form class="display-none" onsubmit="event.preventDefault()" id="registerForm">
+        <form class="display-none" onsubmit="event.preventDefault(), send()" id="registerForm">
             <h2 class="register-title"> Sign Up </h2>
             <div class="register-input-position">
                 <div>
@@ -115,5 +115,6 @@
     <script src="./main/show_password.js"></script>
     <script src="./main/active_register.js"></script>
     <script src="./main/validation.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
