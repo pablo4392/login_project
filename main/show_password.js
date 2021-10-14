@@ -1,5 +1,5 @@
-const user = document.getElementById('user');
-const password = document.getElementById('password');
+const user = document.getElementById('loginUser');
+const password = document.getElementById('loginPassword');
 const eyeButton = document.querySelector(".far");
 let isPass = true;
 

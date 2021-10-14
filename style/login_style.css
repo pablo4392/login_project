@@ -43,11 +43,6 @@
     margin: 0 10px;
 }
 
-::placeholder {
-    color: var(--icon-color);
-    opacity: 500;
-}
-
 .input-section {
     border-bottom: 5px solid var(--icon-color);
 }
@@ -82,13 +77,7 @@
     font-size: 21px;
     background-color: var(--input-background-color);
     color: var(--icon-color);
-}
-
-
-span {
     float: right;
-    background: #fff;
-    cursor: pointer;
     padding: 6.5px;
 }
 

@@ -17,6 +17,10 @@
     --label-font: 'Roboto', sans-serif;
 }
 
+::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .background {
     background-image: linear-gradient(to left top, #6d3662, #77315b, #802c51, #872846, #8b263a, #892740, #872845, #85294a, #75325d, #5f3c69, #48436b, #364766);    
     width: 100%;
@@ -26,7 +30,7 @@
     align-items: center;
 }
 
-.display-none{
+.d-none{
     display: none;
 }
 

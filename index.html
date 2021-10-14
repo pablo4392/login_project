@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="./style/login_style.css">
     <link rel="stylesheet" href="./style/register_style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&family=Righteous&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300&family=Original+Surfer&family=Righteous&display=swap" rel="stylesheet"> -->
-
     <title>Login</title>
 </head>
 <body>
@@ -30,21 +27,21 @@
 
             <!-- user input -->
             <div class="space-input">
-                <label class="label-input" for="user">
+                <label class="label-input" for="loginUser">
                     <i class="fas fa-user"></i>
                 </label>
                 <div class="input-section">
-                    <input type="text" placeholder="User" autocomplete="off" class="user-input" id="user" />
+                    <input type="text" placeholder="User" autocomplete="off" class="user-input" id="loginUser" />
                 </div>
             </div>
 
             <!-- password input -->
             <div class="space-input">
-                <label class="label-input" for="password">
+                <label class="label-input" for="loginPassword">
                     <i class="fas fa-key"></i>
                 </label>
                 <div class="input-section">
-                    <input type="password" placeholder="Password" autocomplete="off" class="password-input" id="password" />
+                    <input type="password" placeholder="Password" autocomplete="off" class="password-input" id="loginPassword" />
                     <span class="eye-section" onclick="togglePass()">
                         <i class="far fa-eye-slash"></i>
                     </span>
@@ -52,7 +49,7 @@
             </div>
             
             <!-- button -->
-            <button class="login-button">
+            <button type="submit" class="login-button">
                 Login
             </button>
             <button class="register-button" onclick="registerActivation()">
@@ -61,49 +58,87 @@
         </form>
 
         <!------------------------------ REGISTER FORMULARY ---------------------------->
-        <form class="display-none" onsubmit="event.preventDefault(), send()" id="registerForm">
+        <form class="d-none" id="registerForm">
             <h2 class="register-title"> Sign Up </h2>
+            
+            <!-- Name register -->
             <div class="register-input-position">
                 <div>
-                    <label for="registerName" class="register-input-label"> Name </label>
+                    <label for="name" class="register-input-label"> Full Name </label>
                 </div>
-                <input type="text" class="register-input" id="registerName">
-            </div>
-            <div class="register-input-position">
-                <div>
-                    <label for="registerLastName" class="register-input-label"> Last Name </label>
+                <div class="register-input-section">
+                    <input type="text" placeholder="John Doe" class="register-input" id="name">
+                    <span class="val-icons d-none" id="name-validation">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
                 </div>
-                <input type="text" class="register-input" id="registerLastName">
-            </div>
-            <div class="register-input-position">
-                <div>
-                    <label for="registerMail" class="register-input-label"> Mail </label>
-                </div>
-                <input type="email" class="register-input" id="registerMail">
-            </div>
-            <div class="register-input-position">
-                <div>
-                    <label for="registerUsername" class="register-input-label"> Username </label>
-                </div>
-                <input type="text" class="register-input" id="registerUsername">
+                <h6 class="instruction-label d-none" id="name-ins">Please enter a valid format</h6>
             </div>
 
+            <!-- Email register -->
             <div class="register-input-position">
                 <div>
-                    <label for="registerPassword" class="register-input-label"> Password </label>
+                    <label for="email" class="register-input-label"> Mail </label>
                 </div>
-                <input type="password" class="register-input" id="registerPassword">
+                <div class="register-input-section">
+                    <input type="email" placeholder="correo@mail.com" class="register-input" id="email">
+                    <span class="val-icons d-none" id="email-validation">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </div>
+                <h6 class="instruction-label d-none" id="email-ins">Please enter a valid format</h6>
             </div>
 
+            <!-- User register -->
+            <div class="register-input-position">
+                <div>
+                    <label for="user" class="register-input-label"> Username </label>
+                </div>
+                <div class="register-input-section">
+                    <input type="text" placeholder="John123" class="register-input" id="user">
+                    <span class="val-icons d-none" id="user-validation">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </div>
+                <h6 class="instruction-label d-none" id="user-ins">Your user must be between 5 and 20 characters</h6>
+            </div>
+            
+            <!-- Password register  -->
+            <div class="register-input-position">
+                <div>
+                    <label for="password" class="register-input-label"> Password </label>
+                </div>
+                <div class="register-input-section">
+                    <input type="password" class="register-input" id="password">
+                    <span class="val-icons d-none" id="password-validation">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </div>
+                <h6 class="instruction-label d-none" id="password-ins">Your password must be between 8 and 30 characters</h6>
+            </div>
+            
+            <!-- Confirm Password -->
             <div class="register-input-position">
                 <div>
                     <label for="confirmPassword" class="register-input-label"> Repeat password </label>
                 </div>
-                <input type="password" class="register-input" id="confirmPassword">
+                <div class="register-input-section">
+                    <input type="password" class="register-input" id="confirmPassword">
+                    <span class="val-icons d-none" id="confirm-validation">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </div>
+                <h6 class="instruction-label d-none" id="confirm-ins">Passwords don't match</h6>
             </div>
 
+            <!-- Terms and conditions -->
+            <div class="register-input-position">
+                <input type="checkbox" class="input-check" id="terms">
+                <label class="terms-label" for="terms"> Terms and conditions </label>
+            </div>
+            
             <div class="buttons-position">
-                <button class="signin-button register" id="registerButton">
+                <button type="submit" class="signin-button register" id="registerButton">
                     Register
                 </button>
                 <button class="signin-button cancel" onclick="cancelFunction()" id="cancelButton">
