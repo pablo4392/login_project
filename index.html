@@ -20,7 +20,7 @@
     <div class="background">
 
         <!---------------------------------------- LOGIN FORMULARY -------------------------------------->
-        <form class="display-none" id="loginForm">
+        <form class="formulary" onsubmit="event.preventDefault()" id="loginForm">
             <div class="header-section">
                 <div class="principal-icon">
                     <i class="fas fa-users header-icon"></i>
@@ -55,13 +55,13 @@
             <button class="login-button">
                 Login
             </button>
-            <button class="register-button" id="registerButton">
+            <button class="register-button" onclick="registerActivation()" id="registerButton">
                 Sign Up
             </button>
         </form>
 
         <!------------------------------ REGISTER FORMULARY ---------------------------->
-        <form class="formulary" id="registerForm">
+        <form class="display-none" onsubmit="event.preventDefault()" id="registerForm">
             <h2 class="register-title"> Sign Up </h2>
             <div class="register-input-position">
                 <div>
@@ -101,11 +101,12 @@
                 </div>
                 <input type="password" class="register-input" id="confirmPassword">
             </div>
+
             <div class="buttons-position">
                 <button class="signin-button register" id="registerButton">
                     Register
                 </button>
-                <button class="signin-button cancel" id="cancelButton">
+                <button class="signin-button cancel" onclick="cancelFunction()" id="cancelButton">
                     Cancel
                 </button>
             </div>
@@ -113,5 +114,6 @@
     </div>
     <script src="./main/show_password.js"></script>
     <script src="./main/active_register.js"></script>
+    <script src="./main/validation.js"></script>
 </body>
 </html>
