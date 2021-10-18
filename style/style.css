@@ -5,10 +5,10 @@
 
 :root {
     --icon-color: #F6F5F5;
-    --button-color: #145374;
     --input-background-color: #85294A;
     --background-button: rgba(255, 255, 255, 0);
     --input-color-selector: #206A5D;
+    --login-button: #145374;
     --register-button: #2A3D66;
     --cancel-button: #931A25;
     --title-size: 38px;
